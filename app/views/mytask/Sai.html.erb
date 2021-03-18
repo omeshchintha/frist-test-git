@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<style>
+table{
+text-align: left;
+color: black;
+}
+</style>
+<html>
+        <h1><%= link_to "Home",root_path %></h1> 
+        <h1><%= link_to "Project Page", form_path %></h1>
+<body>
+<div style="background-color:orange;color:white;padding:20px;">
+<center>
+<h1 style="background-color:green;"><mark><a href="home.html">HYDRABAD</a><mark></h1></center>
+<form action="/action_page.php">
+
+ <table>
+   <tr>
+     <th><label for="fname">First name:</label></th>
+     <td><input type="text" name="" placeholder="enter your name"> <br><br></td>
+   </tr>
+   <tr>
+     <th><label id="fname">surname:</label></th>
+     <td><input type="text" name="sur"> <br><br></td>
+   </tr>
+   <tr>
+     <th><label for="fname">Date of brith:</label></th>
+     <td><input type="date" id="fname" name=""><br><br></td>
+   </tr>
+   <tr>
+     <th><label for="Adderess">Adderess:</label></th>
+     <td><input type="text"><br><br></td>
+   </tr>
+   <tr>
+     <th><label for="lname">educations:</label></th>
+     <td><input type="text" id="lname" name="lname"><br><br></td>
+   </tr>
+   <tr>
+     <th><label for="">negitives:</label></th>
+     <td><input type="text" id=""name=""><br><br></td>
+   </tr>
+   <tr>
+     <th><lable for="email">email:</lable></th>
+     <td><input type="emails" id=""name="email"><br><br></td>
+   </tr>
+   <tr>
+     <th><lable for="phonenumber">phone number:</lable></th>
+     <td><input type="text" id=""name=""><br><br></td>
+   </tr>
+   <tr>
+     <th><lable for type="pin">pin:</lable></th>
+     <td><input type="pin" id="pin"><br><br></td>
+   </tr>
+   <tr>
+     <th><lable for type="state">state:</lable></th>
+     <td><input type="states" id="state"><br><br></td>
+   </tr>
+ </table>
+ <center><p><a href="home.html">submit</a></p></center>
+ </form>
+ <span style="border:10px solid red">hii friends hello good moring all</span> and the form-data will be sent to a page on the 
+ server called "action_page.php".</p>
+
+ </body>
+ </html>

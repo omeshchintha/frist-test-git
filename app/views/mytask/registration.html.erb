@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body>
+        <div class="container">
+            <marquee><h1>Registration Here...</h1></marquee>
+            <form id="myform">
+                <div class="row"></div>
+                <div class="col-md-5 offset-md-5 response"></div><br>
+                
+                <input type="hidden" name="id" value="">
+                <div class="form-group row">
+                    <label class="col-md-5 text-right col-form-label" for="name"><b>Name:</b></label>
+                    <div class="col-md-5">
+                        <input type="text" name="name" placeholder="Full Name" class="form-control" value="">
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-md-5 text-right" for="sonof"><b>Father's Name:</b></label>
+                    <div class="col-md-5">
+                        <input type="text" name="sonof" placeholder="Father's Name" class="form-control" value="">
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-md-5 text-right" for="dob"><b>Date Of Birth:</b></label>
+                    <div class="col-md-5">
+                        <input type="date" name="dob" class="form-control" value="">
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-md-5 text-right" for="gender"><b>Gender:</b></label>
+                    <div class="col-md-5">
+                        <label class="radio-inline" for="gender">
+                        <input type="radio" name="gender" value="Male">Male
+                        </label>
+                        <label class="radio-inline" for="gender">
+                        <input type="radio" name="gender" value="Female">Female
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-md-5 text-right" for="mail"><b>Email ID:</b></label>
+                    <div class="col-md-5">
+                        <input type="email" name="mail" placeholder="Sample123@gmail.com" class="form-control" value="">
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-md-5 text-right" for="password"><b>Password:</b></label>
+                    <div class="col-md-5">
+                        <input type="password" name="password" class="form-control" placeholder="enter password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-5 text-right" for="cpassword"><b>Confirm Password:</b></label>
+                    <div class="col-md-5">
+                        <input type="password" name="cpassword" class="form-control" placeholder="Re-enter password">
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-md-5 text-right" for="contact"><b>Contact:</b></label>
+                    <div class="col-md-5">
+                        <input type="tel" name="contact" placeholder="Phone Number" class="form-control" value="">
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-md-5 text-right" for="address"><b>Address:</b></label>
+                    <div class="col-md-5">
+                        <textarea name="address" placeholder="Premenent Address" class="form-control"></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <div class="offset-md-6 col-md-5">
+                        <input type="submit" class="btn btn-outline-success" value="Register">
+                        <input type="reset" value="Cancel" class="btn btn-outline-secondary">
+                    </div>
+                </div>
+            </form>
+            <script src="bootstrap/js/additional-methods.min.js"></script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+       
+    </div>
+    </body>
+</html>

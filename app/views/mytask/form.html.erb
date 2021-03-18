@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <h1><%= link_to "Home",root_path %></h1> 
+        <h1><%= link_to "Project Page", registration_path %></h1>
+		<title>form validation</title>
+		<script>
+			function validation(){
+				var name =document.validation_form.pname.value;
+				var fathername =document.validation_form.sonof.value;
+				if(name ==""){
+					alert("please enter name");
+					return false;
+				}
+				if(fathername ==""){
+					alert("please enter father name");
+					return false;
+				} 
+                if (Dob ==""){
+                	alert("please enter dob");
+                	return false;
+                }
+                if (Qualification ==""){
+                	alert("please enter study");
+                	return false;
+                }
+                if (Password ==""){
+                	alert("please enter Password");
+                	return false;
+                }
+                if (Adderess ==""){
+                	alert("please enter adderess");
+                	return false;
+                }
+                if (Phonenumber ==""){
+                	alert("please enter number");
+                	return false;
+                }
+                if (job ==""){
+                	alert("please enter adderess")
+                }
+			}
+		</script>
+ 	</head>
+ 	<body align="left" bgcolor="lightblue">
+ 		<h1 align="center"><b><i>Form validations<i></b></h1>
+
+ 		<form name="validation_form">
+ 			<table>
+            <tr>
+   			<th><label>Name</label></th>
+ 			<td><input type="text" name="pname" placeholder="enter your name" value=""></td>
+ 		    </tr>
+
+ 			<tr>
+ 			<th><label>Father name</label></th>
+ 			<td><input type="text" name="sonof" placeholder="enter your fathername" value=""></td></tr>
+            <tr>
+ 			<th><lable>Dob</lable></th>
+ 			<td><input type="date" name="dob" placeholder="enter your datebirth"></td>
+ 		    </tr>
+            <tr>
+ 			<th><lable>Qualification</lable></th>
+ 			<td><input type="text" name="dob" placeholder="enter your study"></td>
+ 		    </tr>
+            <tr>
+ 			<th><lable>Gmail</lable></th>
+ 			<td><input type="text" name="dob" placeholder="enter your study"></td>
+ 		    </tr>
+             <tr>
+ 			<th><lable>Password</lable></th>
+ 			<td><input type="text" placeholder="enter your Password"></td>
+ 		    </tr>
+             <tr>
+ 			<th><lable>Adderess</lable></th>
+ 			<td><input type="text" placeholder="enter your adderess"></td>
+ 		    </tr>
+             <tr>
+ 			<th><lable>Phonenumber</lable></th>
+ 			<td><input type="text" placeholder="enter your Phonenumber"></td>
+ 		    </tr>
+             <tr>
+ 			<th><lable>Job</lable></th>
+ 			<td><input type="text" placeholder="enter your adderess"></td>
+ 		    </tr>
+             
+
+             </table>
+ 			<input type="submit"value="ok" onclick="validation()" >
+ 		</form>
+ 	</body>

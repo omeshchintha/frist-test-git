@@ -1,0 +1,63 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+# default: &default
+#   adapter: sqlite3
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   timeout: 5000
+
+# development:
+#   <<: *default
+#   database: omesh_development.sqlite3
+
+# # Warning: The database defined as "test" will be erased and
+# # re-generated from your development database when you run "rake".
+# # Do not set this db to the same as development or production.
+# test:
+#   <<: *default
+#   database: db/test.sqlite3
+
+# production:
+#   <<: *default
+#   database: db/production.sqlite3
+
+
+
+common: &common
+  adapter: postgresql
+  encoding: utf8
+  min_messages: WARNING
+
+development: &development
+  <<: *common
+  database: <%= ENV['MEDCORDANCE_DATABASE'] || 'task_development' %>
+  host: <%= ENV['MEDCORDANCE_HOST'] || 'localhost' %>
+  user: <%= ENV['MEDCORDANCE_USER'] || 'postgres' %>
+  password: <%= ENV['MEDCORDANCE_PASSWORD'] || 'postgres' %>
+  port: <%= ENV['MEDCORDANCE_PORT'] || '5432'%>
+
+production:
+  <<: *common
+  # database: <%= ENV['RDS_DB_NAME'] %>
+  # username: <%= ENV['RDS_USERNAME'] %>
+  # password: <%= ENV['RDS_PASSWORD'] %>
+  # host: <%= ENV['RDS_HOSTNAME'] %>
+  # port: <%= ENV['RDS_PORT'] %>
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test: &test
+  <<: *common
+  database: <%= ENV['MEDCORDANCE_DATABASE'] || 'task_test' %>
+  host: <%= ENV['MEDCORDANCE_HOST'] || 'localhost' %>
+  user: <%= ENV['MEDCORDANCE_USER'] || 'postgres' %>
+  password: <%= ENV['MEDCORDANCE_PASSWORD'] || 'postgres' %>
+  port: <%= ENV['MEDCORDANCE_PORT'] || '5432'%>
+
+cucumber:
+  <<: *test
+

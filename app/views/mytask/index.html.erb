@@ -1,0 +1,136 @@
+<Doctypehtml>
+<html>
+<head>
+</head>
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 5px;
+  overflow: hidden;
+  background-color:tomato;
+}
+
+li {
+  float:left;
+}
+
+li a {
+  display: block;
+  color:blue;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size:30px;
+}
+
+li a:hover {
+  background-color: #111111;
+  color:white;
+}
+.dropbtn {
+/*  background-color: #3498DB;
+  color: white;
+  padding: 2px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  opacity: 1;*/
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: block;}
+
+.show {display: block; position: fixed;}
+</style>
+<h1><%= link_to "Home",root_path %></h1> 
+<h1><%= link_to "Project Page", prj_path %></h1>
+
+<ul>
+<li>   <a href="home">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       </a></li>
+<li>   <div class="dropdown">
+        <a onclick="myFunction()" class="dropbtn">Herophotos</a>
+       <div id="myDropdown" class="dropdown-content">
+       <a href="hero.html">Ramu</a>
+       <a href="maheshbabu">Maheshbabu</a>
+       <a href="alluarjun.html">Alluarjun</a>
+       <a href="rampavan.html">Ramcheran&Pavanklyan</a>
+</div>
+</div>
+</li>
+       <li><a href="S143">Sai</a></li>
+       <li><a href="www.google.com">Google</a></li>
+       <li><a href="omesh.html">Omesh</a></li>
+       <li><a href="devrajdunna.html">Devrajdunna</a></li>
+       <li><a href="registration.html">Registration</a></li>
+       <li><a href="Family">Family photos</a></li>
+ <br><br><br><br><br>
+       <!-- <img src="chifile/tyyy.jpg" alt="Girl in a jacket" width="200" height="200">
+       <img src="chifile/ssss.jpeg" alt="Girl in a jacket" width="200" height="200">
+       <img src="chifile/kk.jpg" alt="Girl in a jacket" width="200" height="200">
+       <img src="chifile/om.jpg" alt="Girl in a jacket" width="200" height="200">
+       <img src="chifile/me.jpg" alt="Girl in a jacket" width="300" height="200"> 
+       <img src="chifile/sh.jpg" alt="Girl in a jacket" width="150" height="200">
+        -->
+       <%= image_tag "ssss.jpeg", class: "width=200" "height=200" %>
+       <%= image_tag "mahii.jpg", class: "width=200" "height=200" %>
+       <%= image_tag "mahiii.jpeg", class: "width=200" "height=200"%>
+       <%= image_tag "mhi.jpg", class: "width=200" "height=200" %>
+       <%= image_tag "st.jpg", class: "width=200" "height=200" %>
+       <%= image_tag "om.jpg", class: "width=200" "height=200"%>
+       <%= image_tag "om1.jpeg", class: "width=200" "height=200" %>
+       
+}
+
+
+</body>
+
+</html>
+  <script>
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>

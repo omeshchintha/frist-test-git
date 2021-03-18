@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<h1><%= link_to 'Home', root_path -%></h1>
+        <h1><%= link_to "Project Page", form_path %></h1>
+		<title>table validation</title>
+		<marquee><h1 style="font-size:3em">Registration Form</h1></marquee>
+		<script>
+
+			   function registration(){	
+			   		var a =document.registration_form.name.value;
+			   		var b =document.registration_form.fathername.value;
+			   		var c =document.registration_form.dob.value;
+			   		var d =document.registration_form.address.value;
+			   		 var e = document.registration_form.email.value;//console.log(g);
+			   		var f =document.registration_form.phone.value;//console.log(f);return false;
+                     if(a ==""){
+                     	alert("please enter name");
+                     	return false;
+                     }
+                     if(b ==""){
+                     	alert("please enter father name");
+                     	return false;
+                     } 
+                     if(c ==""){
+                     	alert("please enter date of brith");
+                     	return false;
+                     } 
+                     if(d ==""){
+                     	alert("please enter address");
+                     	return false;
+                     }
+                     if(e == "") {
+                    	alert("enter your correct EmailID");
+                    	return false;
+            		}else{
+                    	ValidateEmail(e);
+                	}
+                	if(f == "")	{
+                		alert("enter the phone number");
+                		return false;
+                	}
+                  
+			   	}
+			   	function ValidateEmail(mail) {
+	                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
+	                   return (true)
+	                }
+	                alert("You have entered an invalid email address!")
+	                return (false)
+            	}
+			
+
+		</script>
+	</head>
+ 	<body align="left" bgcolor="violet"><br><br>
+     	<form name="registration_form">
+     	<table>
+         <tr> 
+     	     <th><label for="name">NAME:</label></th>
+		     <td><input type="text" name="name" placeholder="enter name"></td></tr> <tr> 
+		     	<th><label for="fathername">FATHERNAME:</label></th>
+		       <td><input type="text" name="fathername" placeholder="enter name"></td></tr>
+		     <tr>
+		     	<th><label for="dob">DOB:</label></th>
+		     <td><input type="date" name="dob" placeholder="enter date"></td></tr>
+
+		     <tr>
+		     	<th><lable for="address">ADDRESS:</lable></th>
+		     <td><textarea type="text" name="address" placeholder="enter the adderess"></textarea></td></tr>
+		   	 <tr>
+		   	 	<th><label for="email">Email:</label></th>
+		     <td><input type="email" name="email" placeholder="enter the Email"></td></tr>
+		     <tr>
+		     	<th><label for="phone">PHonrnumber:</label></th>
+		     <td><input type="tel" name="phone" placeholder="enter PHone number"></td></tr>
+		 </table>
+		    <center> <input type="submit" value="submit" onclick="registration()"></center>
+     	</form>
+ 	</body>
+</html>
